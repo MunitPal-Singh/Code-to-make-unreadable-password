@@ -1,0 +1,25 @@
+import random
+
+
+words = []
+
+sc = ['@','#','$','%','&']
+
+
+with open ("C:\\Users\munit\Desktop\\new course practise python\generating readable password\gett_word.txt","r") as file:
+    a = file.readlines()
+    
+    for b in a:
+        c = b.split()
+        
+        
+        for d in c:
+            if len(d) > 5:
+                words.append(d.capitalize())
+                
+word = random.choice(words)
+schar = random.choice(sc)
+num = str(random.randint(10, 99))
+
+print(word + schar + num)
+    
